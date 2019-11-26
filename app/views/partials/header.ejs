@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrzej Świętek</title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" href="<%= webpack['index.css'] %>" type="text/css" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon"
+    type="image/png"
+    href="/images/pwa.png" />
+    <script src="https://kit.fontawesome.com/0a20501621.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+<script>
+    AOS.init();
+</script>
+    <div class="app app__layout">
+            <div id="topbar"></div>
+        <header>
+            <span class="header__icon">
+                <svg class="menu__icon no--select" width="44px" height="44px" viewBox="0 0 48 48" fill="#fff">
+                    <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+                </svg>
+            </span>
+
+            <span class="header__title no--select">Andrzej Świętek</span>
+        </header>
+        <div class="header-image">
+           <img src="/images/bg.jpg" alt="">
+            <div class="header-author">
+                <img class="header-author" src="/images/avatar.svg" alt="">
+            </div>
+            <div class="header-author-caption"> Andrzej Świętek
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+
+
+        <div class="menu__overlay"></div>
+        <a href="#topbar" class="back-to-top" aria-label="Back to Top" style="transform: translateY(-100px);">
+                <i class="fa fa-arrow-up"></i>
+        </a>
+
+        <script src="/js/menu.js"></script>
+        <script src="/js/anchor.js"></script>

@@ -1,0 +1,161 @@
+<% include ./partials/header %>
+<% include ./partials/menu %>
+<section class="card_container">
+
+    <div class="container">
+        <div data-aos="zoom-in-up">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center">Euclidean Algorithm  - NWD </h2>
+
+                <div class="container">
+                    <section class="card first">
+                    <pre class="python">
+                        <code class="python">
+                            def <code class="class">nwd</code><code class="white">(a, b)</code>:
+                                while <code class="white"> b </code>:
+                                    <code class="white">a, b <code class="operator">=</code> b, a <code class="operator">%</code> b </code>
+                                return <code class="white">a</code>
+                        </code>
+                    </pre>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div data-aos="zoom-in-down">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center">NWW </h2>
+                <div class="container">
+                    <section class="card first">
+                        <pre class="python">
+                            <code class="python">
+                                from <code class="white">functools</code> import <code class="white">reduce</code>
+
+                                    <code class="comment">#oblicza NWD (najwiekszy wspolny dzielnik) dla dwoch liczb</code>
+                                    def <code class="class">nwd</code><code class="white">(a, b)</code>:
+                                        while <code class="white">b <code class="operator">!= </code> 0</code> :
+                                            <code class="white">b, a <code class="operator">= </code> a <code class="operator"> % </code> b, b</code>
+                                        return a
+
+                                    <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla dwoch liczb</code>
+                                    def <code class="class">nww</code><code class="white">(a, b)</code>:
+                                        return <code class="class">abs <code class="white">( a <code class="operator"> * </code> b</code> <code class="operator"> / </code> nwd <code class="white">(a, b) )</code></code>
+
+                                    <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla listy liczb</code>
+                                    def <code class="class">nww_list</code><code class="white">(list)</code>:
+                                        return <code class="class">reduce</code><code class="white">(<code class="class">nww</code>, list, 1)</code>
+                            </code>
+                        </pre>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div data-aos="zoom-in-down">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center">Primary Number </h2>
+                <div class="container">
+                    <section class="card first">
+                        <pre class="python">
+                            <code class="python">
+                                def <code class="class">primes_sieve</code> <code class="white">(n)</code>:
+                                    <code class="white">range_n <code class="operator">=</code> n+1</code>
+                                    <code class="white">not_prime <code class="operator">=</code> <code class="class">set</code>() </code>
+                                    <code class="white">primes <code class="operator">=</code> <code class="class">[]</code></code>
+                                <code class="comment"># od 2 zaczynamy do ustalonej liczby tu 100</code>
+                                    for <code class="white">i</code> in <code class="class">range</code><code class="white">(2, range_n)</code>:
+                                        <code class="comment"># i jesli liczba nie jest w tablicy z nie pierwszymi to znaczy ze jest pierwsza</code>
+                                        if <code class="white">i</code> in <code class="white">not_prime</code>:
+                                            continue
+                                        <code class="comment"># Tworze tutaj tablice z nie pierwszymi bo łatwiej</code>
+                                        for <code class="white">f</code> in <code class="class">range</code><code class="white">(i <code class="operator">*</code> 2, range_n, i)</code>:
+                                            <code class="white">not_prime</code>.<code class="class">add</code><code class="white">(f)</code>
+
+                                        <code class="white">primes</code>.<code class="class">append</code><code class="white">(i)</code>
+
+                                    return <code class="white">primes</code>
+
+                                <code class="white"><code class="class">print</code>(<code class="class">primes_sieve</code>(100))</code>
+                            </code>
+                        </pre>
+                    </section>
+                </div>
+        </section>
+        </div>
+        <div data-aos="zoom-in-down">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center">Perfect Number </h2>
+                <div class="container">
+                    <section class="card first">
+                        <pre class="python">
+                            <code class="python">
+                                def <code class="class">suma_dzilnikow</code><code class="white">(number)</code>:
+                                    <code class="white">suma <code class="operator">=</code> 0</code>
+                                    for <code class="white">i</code> in <code class="class">range</code><code class="white">(1,number)</code>:
+                                        if <code class="white">number <code class="operator">%</code> i <code class="operator">==</code> 0</code>:
+                                            <code class="white">suma <code class="operator">+=</code> i</code>
+                                        else:
+                                            continue
+                                    return <code class="white">suma</code>
+
+                                    for <code class="white">n</code> in <code class="class">range</code><code class="white">(0,1000)</code>:
+                                        if <code class="white">n <code class="operator">==</code> 0</code>:
+                                            continue
+                                        elif <code class="white"><code class="class">suma_dzilnikow</code>(n) <code class="operator">==</code> n</code>:
+                                            <code class="class">print</code>(<code class="string">f'Liczba <code class="white">{n}</code> jest liczbą doskonałą'</code>)
+                                        else:
+                                            <code class="class">print</code>(<code class="string">f'Liczba <code class="white">{n}</code> nie jest liczbą doskonałą'</code>)
+                            </code>
+                        </pre>
+                    </section>
+                </div>
+        </section>
+        </div>
+        <div data-aos="zoom-in-down">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center">Factorial </h2>
+                <div class="container">
+                    <section class="card first">
+                        <pre class="python">
+                            <code class="python">
+                                def <code class="class">factorial</code><code class="white">(n)</code>:
+                                    if <code class="white">n <code class="operator">==</code> 0 </code>:
+                                        return <code class="white">1</code>
+                                    else:
+                                        return <code class="white">n <code class="operator">*</code> <code class="class">factorial</code>(n-1)</code>
+
+
+                                <code class="white">x <code class="operator">=</code> <code class="class">int</code>(<code class="class">input</code>(<code class="string">'Proszę Podać Liczbę nie ujemną, najlepiej całkowitą bo i tak zaokrągle: '</code>)) </code>
+                                if <code class="white">x<code class="operator"> < </code>0</code>:
+                                    <code class="class">print</code><code class="white">(<code class="string">'Miała być nie ujemna, a teraz wywali program'</code>)</code>
+                                    <code class="class">exit</code><code class="white">(0)</code>
+                                elif <code class="white">x<code class="operator"> == </code>0</code>:
+                                    <code class="class">print<code class="white">(<code class="string">'Factorial of 0 is equal to 1'</code>)</code></code>
+                                else:
+                                    <code class="class">print</code><code class="white">(<code class="class">factorial</code>(x))</code>
+                            </code>
+                        </pre>
+                    </section>
+                </div>
+        </section>
+        </div>
+        <div data-aos="zoom-in-down">
+            <section class="card_container">
+                <h2 style="margin-top:70px;" align="center"> Inne </h2>
+                <div class="container">
+                    <section class="card first">
+                        <pre class="python">
+                            <code class="python">
+
+                            </code>
+                        </pre>
+                    </section>
+                </div>
+        </section>
+        </div>
+
+          <!-- Toast msg's  -->
+        <div class="toast__container"></div>
+    </div>
+</section>
+<% include ./partials/colorful-text %>
+<% include ./partials/settings-modal %>
+<% include ./partials/footer %>

@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<% include ./partials/menu %>
+<div data-aos="fade-right">
+    <div class="colorful-text"><center><h1 class="loginh1" > LOGIN </h1></center></div>
+
+
+    <form class="login" action="/login" method="POST">
+        <div>
+            <!--        <label for="username">Username</label>-->
+            <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
+        <div>
+            <!--        <label for="password">Password</label>-->
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<% include ./partials/footer %>

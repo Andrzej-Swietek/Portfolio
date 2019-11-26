@@ -1,0 +1,57 @@
+
+<div class="modal" id="modal2">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        Settings
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+      </div>
+      <section class="modal-content">
+        <div class="color-blocks">
+            <div class="color-block-yellow"></div>
+            <div class="color-block-blue"></div>          
+            <div class="color-block-green"></div>
+            <div class="color-block-red"></div>  
+            <div class="color-block-purple"></div>
+            <div class="color-block-brown"></div>
+            <div class="color-block-black"></div>
+        </div>
+
+      </section>
+      <footer class="modal-footer">
+          <input type="submit" class="color-picker" title="Submit">     
+      </footer>
+    </div>
+  </div>
+      <script>
+        const openEls = document.querySelectorAll("[data-open]");
+        const closeEls = document.querySelectorAll("[data-close]");
+        const isVisible = "is-visible";
+
+        for (const el of openEls) {
+        el.addEventListener("click", function() {
+            const modalId = this.dataset.open;
+            document.getElementById(modalId).classList.add(isVisible);
+        });
+        }
+
+        for (const el of closeEls) {
+        el.addEventListener("click", function() {
+            this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+        });
+        }
+
+        document.addEventListener("click", e => {
+        if (e.target == document.querySelector(".modal.is-visible")) {
+            document.querySelector(".modal.is-visible [data-close]").click();
+        }
+        });
+
+        document.addEventListener("keyup", e => {
+        // if we press the ESC
+        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+                document.querySelector(".modal.is-visible [data-close]").click();
+        }
+        });
+      </script>

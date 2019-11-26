@@ -1,0 +1,219 @@
+<% include ./partials/header %>
+<% include ./partials/menu %>
+<section class="card_container">
+
+
+    <div class="container">
+        <section class="card_container">
+            <h2 style="margin-top:70px;" align="center">FRC Tigertrons 222 2018/19</h2>
+            <% include ./blackholeVideo %>
+            <div class="container">
+                <section class="card first">
+                        <pre>
+                <code class="importy">
+                    package <code class="common">frc.robot;</code>
+
+                    import <code class="common">edu.wpi.first.wpilibj.TimedRobot;</code>
+                    import <code class="common">edu.wpi.first.wpilibj.command.Command;</code>
+                    import <code class="common">edu.wpi.first.wpilibj.command.Scheduler;</code>
+                    import <code class="common">edu.wpi.first.wpilibj.smartdashboard.SendableChooser;</code>
+                    import <code class="common">edu.wpi.first.wpilibj.smartdashboard.SendableChooser;</code>
+                    import <code class="common">edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;</code>
+                    import <code class="common">frc.robot.commands.Autonomous;</code>
+                    import <code class="common">frc.robot.commands.Autonomous2;</code>
+                    import <code class="common">frc.robot.commands.Autonomous_Sand;</code>
+                    import <code class="common">frc.robot.commands.Autonomous1;</code>
+                    import <code class="common">frc.robot.subsystems.Hatch;</code>
+                    import <code class="common">frc.robot.subsystems.BallIntake;</code>
+                    import <code class="common">frc.robot.subsystems.BallPiston;</code>
+                    import <code class="common">frc.robot.subsystems.Drivetrain;</code>
+                    import <code class="common">frc.robot.subsystems.Limelight;</code>
+                    import <code class="common">frc.robot.subsystems.Shift;</code>
+                    import <code class="common">frc.robot.subsystems.Skid;</code>
+                    import <code class="common">frc.robot.subsystems.UpyDownyArmThing;</code>
+                </code>
+
+
+            <code class="public">public<code class="class"> Robot </code>extends <code class="common">TimedRobot</code> {
+
+                    <code class="comment">//public static ExampleSubsystem m_subsystem = new ExampleSubsystem();</code>
+                    <code class="public">
+                    public static<code class="class"> Limelight <code class=obj>m_limelight = null </code> </code>
+                    public static<code class="class"> Drivetrain <code class=obj>m_drivetrain = null </code>  </code>
+                    public static<code class="class"> Hatch </code><code class=obj>m_hatch = null </code>
+                    public static<code class="class"> BallPiston <code class=obj>m_ballPiston = null </code></code>
+                    public static<code class="class"> BallIntake <code class=obj>m_BallIntake = null </code></code>
+                    public static <code class="class">BallIntake <code class=obj>m_BallIntake = null;</code></code>
+                    public static <code class="class">Shift <code class=obj>m_shift = null;</code></code>
+                    public static <code class="class">Skid <code class=obj>m_skid = null;</code></code>
+                    public static <code class="class">UpyDownyArmThing <code class=obj>m_arm = null;</code></code>
+                    public static <code class="class">OI <code class=obj>m_oi;</code></code>
+                    public static <code class="class">Object <code class=obj>commands;</code></code>
+                    </code>
+                    <code class="class">RCommand <code class=obj>m_autonomousCommand;</code>
+                    SendableChooser<Command> <code class=obj>m_chooser = new SendableChooser<>();</code>
+                                    </code>
+                    <code class="comment">
+                    /**
+                    * This function is run when the robot is first started up and should be
+                    * used for any initialization code.
+                    */
+                    </code>
+
+                <code class="override">@Override</code>
+
+                    public void <code class="common">robotInit</code>() {
+
+
+                        <code class="obj">m_limelight</code> = new <code class="common">Limelight</code>();
+                        <code class="obj">m_drivetrain </code>= new <code class="common">Drivetrain</code>();
+                        <code class="obj">m_hatch</code> = new <code class="common">Hatch</code>();
+                        <code class="obj">m_skid </code> = new <code class="common">Skid</code>();
+                        <code class="obj">m_BallIntake </code>= new <code class="common">BallIntake</code>();
+                        <code class="obj">m_ballPiston </code>= new <code class="common">BallPiston</code>();
+                        <code class="obj">m_shift</code> = new <code class="common">Shift</code>();
+                        <code class="obj">m_arm </code>= new <code class="common">UpyDownyArmThing</code>();
+                        <code class="obj">m_oi </code>= new <code class="common">OI</code>();
+                        <code class="obj">m_autonomousCommand </code>= new <code class="common">Autonomous</code>();
+
+
+                        <code class="obj">m_chooser.</code><code class="common" >addDefault</code>( "<code class="common2" >Default</code>", new <code class="class">Autonomous</code>() );
+                        <code class="obj">SmartDashboard</code><code class="common" >.putData</code>( "<code class="common2" >Auto mode</code>", <code class="obj">m_chooser</code>);
+                        <code class="obj">m_chooser</code><code class="common" >.addOption</code>( "<code class="common2" >Sand Storm</code>", new <code class="class">Autonomous_Sand</code>() );
+                        <code class="obj">SmartDashboard</code><code class="common" >.putData</code>( "<code class="common2" >Auto mode</code>", <code class="obj">m_chooser</code>);
+                        <code class="obj">m_chooser</code><code class="common" >.addOption</code>( "<code class="common2" >Autonomus 1</code>", new <code class="class">Autonomous1</code>() );
+                        <code class="obj">SmartDashboard</code><code class="common" >.putData</code>( "<code class="common2" >Autonomus 2</code>", <code class="obj">m_chooser</code>);
+                        <code class="obj">m_chooser</code><code class="common" >.addOption</code>( "<code class="common2" >Autonomus 2</code>", new <code class="class">Autonomous2</code>() );
+                        <code class="obj">SmartDashboard</code><code class="common" >.putData</code>( "<code class="common2" >Auto mode</code>", <code class="obj">m_chooser</code>);
+
+
+                    }
+
+
+                <code class="override">@Override</code>
+                    public void <code class="common">disabledInit</code>() {
+                    }
+
+                <code class="override">@Override</code>
+                    public void <code class="common">disabledPeriodic</code>()
+                    {
+                        <code class="obj">Scheduler</code>.<code class="common">getInstance</code>().<code class="common">run</code>();
+                    }
+        <code class="comment">
+        /**
+         * This autonomous (along with the chooser code above) shows how to select
+            * between different autonomous modes using the dashboard. The sendable
+            * chooser code works with the Java SmartDashboard. If you prefer the
+            * LabVIEW Dashboard, remove all of the chooser code and uncomment the
+            * getString code to get the auto name from the text box below the Gyro
+            *
+            * You can add additional auto modes by adding additional commands to the
+            * chooser code above (like the commented example) or additional comparisons
+            * to the switch structure below with additional strings & commands.
+            */
+        </code>
+            <code class="override">@Override</code>
+                public void <code class="common">autonomousInit</code>() {
+                   <code class="obj">m_autonomousCommand</code>  = <code class="obj">m_chooser</code>.<code class="common">getSelected</code>();
+
+        <code class="comment">
+            //    String autoSelected = SmartDashboard.getString("Auto Selector","Default");
+            //    switch(autoSelected) {
+            //  	case "My Auto": autonomousCommand = new Autonomous();
+            //  		break;
+            //  	case "Autonomus2": autonomousCommand = new Autonomous2();
+            // 		 break;
+            // 	 case "Autonomus3": autonomousCommand = new Autonomous3();
+            //  		break;
+            //  default:
+            //  		autonomousCommand = new Autonomous();
+            //  break;}
+
+            // schedule the autonomous command (example)
+        </code>
+                if (<code class="obj">m_autonomousCommand</code> != null ) {
+                    <code class="obj">m_autonomousCommand</code>.<code class="common">start</code>(); <code class="comment">//trying to eliminate rapid fire solenoid</code>
+                }
+            }
+        <code class="comment">
+            /**
+             * This function is called periodically during autonomous.
+            */
+        </code>
+        <code class="override">@Override</code>
+            public void <code class="common">autonomousPeriodic</code>()
+             {
+                <code class="obj">Scheduler</code>.<code class="common">getInstance</code>().<code class="common">run</code>();
+                <code class="obj">m_autonomousCommand</code>.<code class="common">start</code>(); <code class="comment">//when you take this out, autonomous does not cycle</code>
+            }
+        <code class="override">@Override</code>
+            public void <code class="common">teleopInit</code>() {
+        <code class="comment">
+                // This makes sure that the autonomous stops running when
+                // teleop starts running. If you want the autonomous to
+                // continue until interrupted by another command, remove
+                // this line or comment it out.
+        </code>
+
+                if (<code class="obj">m_autonomousCommand</code> != null)
+                {
+                    <code class="obj">m_autonomousCommand</code>.<code class="common">cancel</code>();
+                }
+            }
+
+        <code class="comment">
+            /**
+            * This function is called periodically during operator control.
+            */
+        </code>
+        <code class="override">@Override</code>
+        public void <code class="common">teleopPeriodic</code>() {
+            <code class="obj">Scheduler</code>. <code class="common">Instance</code>().<code class="common">run</code>();
+        }
+
+        <code class="comment">
+            /**
+             * This function is called periodically during test mode.
+             */
+        </code>
+        <code class="override">@Override</code>
+        public void <code class="common">testPeriodic</code>() {
+        }
+    }</code>
+
+                            </code>
+                        </pre>
+                </section>
+            </div>
+        </section>
+        <section class="card_container">
+                <div class="container">
+                    <section class="card first">
+                            <%# include ./robot3D/threeshowcase %>
+                    </section>
+                </div>
+        </section>
+
+
+          <!-- Toast msg's  -->
+        <div class="toast__container"></div>
+    </div>
+</section>
+
+
+
+<!--<script src="/js/three.js" type="text/javascript"></script>-->
+<!--<script src="/js/inflate.min.js" type="text/javascript"></script>-->
+<!--<script src="/js/OrbitControls.js"></script>-->
+<!--<script src="/js/GLTFLoader.js"></script>-->
+<!--<script src="/js/EffectComposer.js"></script>-->
+<!--<script src="/js/CopyShader.js"></script>-->
+<!--<script src="/js/ShaderPass.js"></script>-->
+<!--<script src="/js/UnrealBloomPass.js"></script>-->
+<!--<script src="/js/RenderPass.js"></script>-->
+<!--<script src="/js/LuminosityHighPassShader.js"></script>-->
+<!--<div class="robot3d-model">-->
+<!--    <script src="/js/threeshowcase.js" type="text/javascript"></script>-->
+<!--</div>-->
+
+<% include ./partials/footer %>
