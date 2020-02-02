@@ -1,0 +1,31 @@
+<div class="animated-moving-text-cont">
+    <h2 id="animated-moving-text">Be
+        <!--    <span>Always</span>
+                <span>Teaching</span>
+                <span> Humble Energetic</span>
+                <span> Noble Actions </span>-->
+        <span style="display: initial">Annoying</span>
+        <span>Tiresome</span>
+        <span> Hard of Hearing</span>
+        <span> Egotistic </span>
+        <span> Always Right </span>
+    </h2>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs@0.0.0/index.min.js"></script>
+<script type="text/javascript">
+    const text = document.getElementById('animated-moving-text');
+    const word = document.getElementsByTagName('span');
+console.log(word);
+    let i = 0;
+
+    function rotator(){
+        word[i].style.display = 'none';
+        i = (i + 1) % word.length;
+        word[i].style.display = 'initial';
+
+    }
+    setInterval(rotator,800)
+</script>
+
+
