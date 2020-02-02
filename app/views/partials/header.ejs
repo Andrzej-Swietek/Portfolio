@@ -23,11 +23,17 @@
     <div class="app app__layout">
             <div id="topbar"></div>
         <header>
-            <span class="header__icon">
-                <svg class="menu__icon no--select" width="44px" height="44px" viewBox="0 0 48 48" fill="#fff">
-                    <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
-                </svg>
-            </span>
+<!--            <span class="header__icon">-->
+<!--                <svg class="menu__icon no&#45;&#45;select" width="44px" height="44px" viewBox="0 0 48 48" fill="#fff">-->
+<!--                    <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>-->
+<!--                </svg>-->
+<!--            </span>-->
+
+
+            <% include ./menu.ejs %>
+
+
+
 
             <span class="header__title no--select">Andrzej Świętek</span>
         </header>
@@ -48,5 +54,5 @@
                 <i class="fa fa-arrow-up"></i>
         </a>
 
-        <script src="/js/menu.js"></script>
+<!--        <script src="/js/menu.js"></script>-->
         <script src="/js/anchor.js"></script>

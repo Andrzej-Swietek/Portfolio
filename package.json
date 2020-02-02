@@ -12,7 +12,7 @@
     "startWebpackServer": "webpack-dev-server",
     "build": "webpack -p"
   },
-  "author": "deepakgcsevpm@gmail.com",
+  "author": "andrzej@swietek.pl",
   "license": "ISC",
   "devDependencies": {
     "ajv": "^4.11.4",

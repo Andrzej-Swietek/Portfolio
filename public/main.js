@@ -1,17 +1,16 @@
 import app from './js/app';
 import pushnotification from './js/pushnotification';
 import storage from './js/storage';
-import algorithms from './js/algorithms';
-import robotics from './js/robotics';
-import projects from './js/projects';
+
+
 import './style/main.css';
 
 // globally accessible
 window.baseUrl = "https://58821a93.ngrok.io";
-app.init()
+app.init();
 
 // pathname based operation
-switch(location.pathname){ // TODO: run this in one line
+switch(location.pathname){
     case "/storage":
         storage.init();
         break;
@@ -27,8 +26,11 @@ switch(location.pathname){ // TODO: run this in one line
     case "/projects":
         projects.init();
         break;
-    case "/login":
+    case "/loginForm":
         login.init();
+        break;
+    case "/athena":
+        athena.init();
         break;
 }
 

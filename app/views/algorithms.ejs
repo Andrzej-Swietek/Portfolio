@@ -28,21 +28,21 @@
                     <section class="card first">
                         <pre class="python">
                             <code class="python">
-                                from <code class="white">functools</code> import <code class="white">reduce</code>
+                            from <code class="white">functools</code> import <code class="white">reduce</code>
 
-                                    <code class="comment">#oblicza NWD (najwiekszy wspolny dzielnik) dla dwoch liczb</code>
-                                    def <code class="class">nwd</code><code class="white">(a, b)</code>:
-                                        while <code class="white">b <code class="operator">!= </code> 0</code> :
-                                            <code class="white">b, a <code class="operator">= </code> a <code class="operator"> % </code> b, b</code>
-                                        return a
+                                <code class="comment">#oblicza NWD (najwiekszy wspolny dzielnik) dla dwoch liczb</code>
+                                def <code class="class">nwd</code><code class="white">(a, b)</code>:
+                                    while <code class="white">b <code class="operator">!= </code> 0</code> :
+                                        <code class="white">b, a <code class="operator">= </code> a <code class="operator"> % </code> b, b</code>
+                                    return a
 
-                                    <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla dwoch liczb</code>
-                                    def <code class="class">nww</code><code class="white">(a, b)</code>:
-                                        return <code class="class">abs <code class="white">( a <code class="operator"> * </code> b</code> <code class="operator"> / </code> nwd <code class="white">(a, b) )</code></code>
+                                <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla dwoch liczb</code>
+                                def <code class="class">nww</code><code class="white">(a, b)</code>:
+                                    return <code class="class">abs <code class="white">( a <code class="operator"> * </code> b</code> <code class="operator"> / </code> nwd <code class="white">(a, b) )</code></code>
 
-                                    <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla listy liczb</code>
-                                    def <code class="class">nww_list</code><code class="white">(list)</code>:
-                                        return <code class="class">reduce</code><code class="white">(<code class="class">nww</code>, list, 1)</code>
+                                <code class="comment">#oblicza NWW (najmniejsza wspolna wielokrotnosc) dla listy liczb</code>
+                                def <code class="class">nww_list</code><code class="white">(list)</code>:
+                                    return <code class="class">reduce</code><code class="white">(<code class="class">nww</code>, list, 1)</code>
                             </code>
                         </pre>
                     </section>

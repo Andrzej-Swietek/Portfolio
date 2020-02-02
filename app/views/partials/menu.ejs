@@ -1,22 +1,68 @@
-<div class="menu">
-        <div class="menu__header"></div>
-        <ul class="menu__list">
-            <li><a rel="noopener" href="/">Home</a></li>
-            <li><a rel="noopener" href="/">A.T.H.E.N.A</a></li>
-            <li><a rel="noopener" href="/login">Dashboard</a></li>
-            <li><a rel="noopener" href="/projects">Projects</a></li>
-            <li><a rel="noopener" href="/robotics">Robotics</a></li>
-            <li><a rel="noopener" href="/algorithms">Algorithms</a></li>
-            <li><a rel="noopener" href="/">Potatoe.js</a></li>
-<!--            <li><a rel="noopener" href="#">-->
-<!--                <button type="button" class="open-modal" data-open="modal2">-->
-<!--                    Settings-->
-<!--                </button></a>-->
-<!--            </li>-->
+<!--<div class="menu">-->
+<!--        <div class="menu__header"></div>-->
+<!--        <ul class="menu__list">-->
+<!--            <li><a rel="noopener" href="/">Home</a></li>-->
+<!--            <li><a rel="noopener" href="/athena">A.T.H.E.N.A</a></li>-->
+<!--            <li><a rel="noopener" href="/login">Dashboard</a></li>-->
+<!--            <li><a rel="noopener" href="/projects">Projects</a></li>-->
+<!--            <li><a rel="noopener" href="/robotics">Robotics</a></li>-->
+<!--            <li><a rel="noopener" href="/algorithms">Algorithms</a></li>-->
+<!--            <li><a rel="noopener" href="/algorithms">Graphics</a></li>-->
+<!--            <li><a rel="noopener" href="/">Potatoe.js</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="menu__overlay"></div>-->
 
 
-        </ul>
-    </div>
-    <div class="menu__overlay"></div>
-    <script src="./js/menu.js"></script>
-    <% include ./settings-modal %>
+<div id="curtain">
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul class="niceAnimationMenu LihoverEffect">
+                    <li><a rel="noopener" href="/">Home</a></li>
+                    <li><a rel="noopener" href="/athena">A.T.H.E.N.A</a></li>
+                    <li><a rel="noopener" href="/loginForm">Dashboard</a></li>
+                    <li><a rel="noopener" href="/projects">Projects</a></li>
+                    <li><a rel="noopener" href="/robotics">Robotics</a></li>
+                    <li><a rel="noopener" href="/algorithms">Algorithms</a></li>
+                    <li><a rel="noopener" href="/algorithms">Graphics</a></li>
+                    <li><a rel="noopener" href="/">Potatoe.js</a></li>
+    </ul>
+</div>
+<div id="toggle_menu" class="toggle_menu" onclick="toggle_ultimate()"></div>
+<script type="text/javascript">
+    function toggle_ultimate() {
+        toggle_hamburger();
+        toggle_menu_nav();
+    }
+
+    function toggle_menu_nav(){
+        const curtain = document.getElementById("curtain");
+
+        if ( curtain.style.display === 'none')
+        {
+            curtain.style.display = 'flex';
+        }
+        else
+        {
+            curtain.style.display = 'flex';//
+        }
+
+        curtain.classList.toggle('active');
+        // console.log('nav_opened');
+
+    }
+
+    function toggle_hamburger() {
+        const nav = document.getElementById('toggle_menu')
+        nav.style.background = "#fff url('/images/close.svg')";
+
+        // const burger = document.getElementById("toggle_menu");
+        // burger.classList.toggle('active');
+        // burger.style.background = "#fff url('/images/close.svg')";
+    }
+</script>
+
+
+<!--    <script src="./js/menu.js"></script>-->
+<!--    <% include ./settings-modal %>-->

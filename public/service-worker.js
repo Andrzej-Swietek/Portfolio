@@ -9,11 +9,13 @@ const filesToCache = [
     '/algorithms',
     '/robotics',
     '/projects',
-    '/login',
+    '/loginForm',
+    '/athena',
     '/images/refresh.svg',
     '/images/pwa.png',
     '/images/push-off.png',
-    '/images/push-on.png'
+    '/images/push-on.png',
+
 ]
 
 // Install Service Worker
