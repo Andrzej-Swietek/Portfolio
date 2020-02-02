@@ -1,7 +1,5 @@
-# PWA Nodejs Express EJS 
-
-This is demo/boilerplate application for PWA with Nodejs EJS template engine. Here I am trying to use all available features in PWA
-
+# My Personal Portfolio and A.T.H.E.N.A Project Documentation
+![Image](https://github.com/AndrzejSwietek2001/Portfolio/blob/master/public/images/portfolio-www.png)
 ## Install
 
 ```sh
