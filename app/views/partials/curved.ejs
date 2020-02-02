@@ -1,0 +1,15 @@
+<div class="curve-section-cont">
+    <section class="curve-section">
+        <span class="curve">
+            <img src="/images/curve.png"  alt="curve"/>
+        </span>
+    </section>
+</div>
+<script type="text/javascript">
+    const scroll = document.querySelector('.curve');
+    window.addEventListener('scroll', function () {
+        const value = 1 + window.scrollY / -500;
+        scroll.style.transform = `scaleY(${value})`;
+    })
+</script>
+

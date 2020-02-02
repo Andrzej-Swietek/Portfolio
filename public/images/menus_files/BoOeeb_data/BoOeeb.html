@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - #1189 - Horizontal menu items</title>
+<link rel="stylesheet" href="../epjZGd_data/epjZGd_data/codepen-result.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+.LihoverEffect {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.LihoverEffect * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.LihoverEffect li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1em;
+  padding: 0;
+}
+.LihoverEffect a {
+  padding: 0.5em 0.8em;
+  margin: 0.2em 0;
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  text-decoration: none;
+}
+.LihoverEffect a:before,
+.LihoverEffect a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.LihoverEffect a:before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid #0288d1;
+  border-top: 3px solid #0288d1;
+  -webkit-transform: translate(100%, 50%);
+  transform: translate(100%, 50%);
+}
+.LihoverEffect a:after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #0288d1;
+  border-bottom: 3px solid #0288d1;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+.LihoverEffect a:hover,
+.LihoverEffect .current a {
+  color: #ffffff;
+}
+.LihoverEffect a:hover:before,
+.LihoverEffect .current a:before,
+.LihoverEffect a:hover:after,
+.LihoverEffect .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<ul class="snip1189">
+<li class="current"><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<script src="../OyxyRG_data/OyxyRG_data/iframeRefreshCSS-8a264da60d1f38eaa58c8243fe0ad6a782e98673c75e.js"></script>
+
+
+</body></html>

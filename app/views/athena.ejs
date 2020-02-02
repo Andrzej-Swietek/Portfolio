@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+<% include ./partials/menu %>
+<% include ./partials/circle-scroll %>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="./parallax/parallax.js"></script>
+<div class="zdjecie-ruchome">
+    <div class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.2"
+         data-image-src="./images/ai.jpg" style="height: 681px;"></div>
+
+    <script>
+        $('.parallax-window').parallax({
+            imageSrc: './images/ai.jpg'
+        });
+    </script>
+    <div class="typewriter">
+        <h1>Hi! My name is A.T.H.E.N.A ...</h1>
+    </div>
+</div>
+<!--<% include ./partials/curved %>-->
+<section class="card_container">
+    <div class="container">
+        <section class="card first">
+            <% include ./partials/four-blocks %>
+        </section>
+    </div>
+</section>
+
+
+<% include ./partials/footer %>

@@ -1,0 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+.embed-nav a {
+    font-family: "Source Sans Pro", "Lucida Grande","Lucida Sans Unicode",Tahoma,sans-serif;
+}
+
+.embed-nav .result-button-list {
+    position: static;
+}

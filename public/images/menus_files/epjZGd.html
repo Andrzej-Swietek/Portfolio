@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - #1175 - Menu sliding border on hover</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ShfyjH6ALNWnv1xFd/2PhqkUgmMAPIn3GKfeYfWkx0azliwaJcttVdeRnqKshxrrV0u1HMXAn9XAEDCO3Nd2Ug==">
+<link rel="stylesheet" media="all" href="OyxyRG_data/embed-646c959e7b70c81ebddce25a7f4331418259b08402a21018d8f979.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    .embed-footer,
+    .embed-nav {
+      background: #212121;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #6e6e6f;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #1d1d1d;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #e67e22;
+    }
+    .embed-nav .logo-wrap a {
+      color: #c0c0c0;
+    }
+
+    .embed-nav svg {
+      stroke: #c0c0c0 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="OyxyRG_data/twilight-48405ca83e8c8b4ac067604a220b1b084c7bd4d7b403a53bb88.css">
+<link rel="stylesheet" href="OyxyRG_data/codepen.css">
+</head>
+<body id="the-body" style="--borderWidth: 0;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" aria-pressed="false" role="button">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" aria-pressed="false" role="button">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="large-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/littlesnippets/pen/epjZGd" title="Edit on CodePen">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"></path>
+</svg>
+</a>
+<a class="box-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/littlesnippets/pen/epjZGd" title="Edit on CodePen">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24"></path>
+</svg>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="none" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre><code data-lang="htmlmixed" id="actual-html-code" data-og-lang="htmlmixed" data-alt-lang="xml" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"snip1175"</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"current"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"Home"</span><span class="cm-tag cm-bracket">&gt;</span>Home<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"About Us"</span><span class="cm-tag cm-bracket">&gt;</span>About Us<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"Blog"</span><span class="cm-tag cm-bracket">&gt;</span>Blog<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"Services"</span><span class="cm-tag cm-bracket">&gt;</span>Services<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"Products"</span><span class="cm-tag cm-bracket">&gt;</span>Products<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-hover</span>=<span class="cm-string">"Contact"</span><span class="cm-tag cm-bracket">&gt;</span>Contact<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><br><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre><code data-lang="css" id="actual-css-code" data-og-lang="css" data-alt-lang="css" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Raleway:400,500,800</span>);<br><span class="cm-qualifier">.snip1175</span> {<br>  <span class="cm-property">font-family</span>: <span class="cm-string">'Raleway'</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;<br>  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;<br>  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;<br>  <span class="cm-property">font-weight</span>: <span class="cm-number">500</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> * {<br>  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;<br>  <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.35s</span> <span class="cm-atom">ease</span>;<br>  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.35s</span> <span class="cm-atom">ease</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">li</span> {<br>  <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;<br>  <span class="cm-property">list-style</span>: <span class="cm-atom">outside</span> <span class="cm-atom">none</span> <span class="cm-atom">none</span>;<br>  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">1.2em</span>;<br>  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">a</span> {<br>  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">0.5em</span> <span class="cm-number">0</span> <span class="cm-number">0.2em</span>;<br>  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">0.5</span>);<br>  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;<br>  <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;<br>  <span class="cm-property">letter-spacing</span>: <span class="cm-number">1px</span>;<br>  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;<br>  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">before</span>,<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">after</span> {<br>  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;<br>  <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.35s</span> <span class="cm-atom">ease</span>;<br>  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.35s</span> <span class="cm-atom">ease</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">before</span> {<br>  <span class="cm-property">right</span>: <span class="cm-number">100%</span>;<br>  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;<br>  <span class="cm-property">width</span>: <span class="cm-number">3px</span>;<br>  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;<br>  <span class="cm-property">content</span>: <span class="cm-string">""</span>;<br>  <span class="cm-property">background-color</span>: <span class="cm-atom">#f39c12</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">after</span> {<br>  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">0.5em</span> <span class="cm-number">0</span> <span class="cm-number">0.2em</span>;<br>  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;<br>  <span class="cm-property">right</span>: <span class="cm-number">100%</span>;<br>  <span class="cm-property">top</span>: <span class="cm-number">0</span>;<br>  <span class="cm-property">content</span>: <span class="cm-variable cm-callee">attr</span>(<span class="cm-variable">data-hover</span>);<br>  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;<br>  <span class="cm-property">white-space</span>: <span class="cm-atom">nowrap</span>;<br>}<br><span class="cm-qualifier">.snip1175</span> <span class="cm-tag">li</span>:<span class="cm-variable-3">hover</span> <span class="cm-tag">a</span>,<br><span class="cm-qualifier">.snip1175</span> <span class="cm-qualifier">.current</span> <span class="cm-tag">a</span> {<br>  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">100%</span>);<br>}<br><br><br></code></pre>
+</div>
+<div id="result-box" class="code-box active" role="region" aria-label="Result">
+<iframe id="result-iframe" class="result-iframe " sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" tabindex="-1" data-src="https://cdpn.io/littlesnippets/fullembedgrid/epjZGd?type=embed&amp;animations=run" src="epjZGd_data/epjZGd.html" allowtransparency="true" scrolling="yes" allowpaymentrequest="true" allowfullscreen="true" name="CodePen Preview for #1175 - Menu sliding border on hover" title="CodePen Preview for #1175 - Menu sliding border on hover" frameborder="0">
+      </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/littlesnippets" target="_blank" rel="noopener" class="about-image" style="background-image: url(https://s.cdpn.io/profiles/user/331810/512.jpg?2)"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/littlesnippets" target="_blank" rel="noopener">LittleSnippets.net</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/littlesnippets" target="_blank" rel="noopener" class="about-user-more">
+See more by @littlesnippets on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://www.littlesnippets.net/css/codepen-result.css" target="_blank">https://www.littlesnippets.net/css/codepen-result.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button active" id="zoom-button-1">1×</button></li><li><button class="action-button" id="zoom-button-05">0.5×</button></li><li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script>
+    __editor_config = {"id":"classic","editors":[{"id":"html","type":"html","name":"HTML","settings":[{"id":"processor","name":"HTML Preprocessor","type":"select","visible":true,"values":[{"id":"none","name":"None","value":"none","default":true},{"id":"haml","name":"Haml","value":"haml"},{"id":"markdown","name":"Markdown","value":"markdown"},{"id":"slim","name":"Slim","value":"slim"},{"id":"pug","name":"Pug","value":"pug"}]},{"id":"html_classes","name":"Add Class(es) to <html>","type":"input","placeholder":"e.g. single post post-1234","visible":true},{"id":"head","name":"Stuff for <head>","type":"textarea","placeholder":"e.g. <meta>, <link>, <script>","visible":true}],"actions":[{"id":"tidy_html","type":"tidy_code","name":"Format HTML","disabled_processors":["haml","markdown","slim","pug"]},{"id":"view_compiled_html","type":"view_compiled","name":"View Compiled HTML","disabled_processors":["none"]},{"id":"analyze_html","type":"analyze","name":"Analyze HTML"},{"id":"maximize_html_editor","type":"maximize","name":"Maximize HTML Editor"},{"id":"minimize_html_editor","type":"minimize","name":"Minimize HTML Editor"},{"id":"fold_all_html","type":"fold_all","name":"Fold All"},{"id":"unfold_all_html","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"haml","name":"Haml"},{"id":"markdown","name":"Markdown"},{"id":"slim","name":"Slim"},{"id":"pug","name":"Pug"}]},{"id":"css","type":"css","name":"CSS","actions":[{"id":"tidy_css","type":"tidy_code","name":"Format CSS","disabled_processors":["sass","stylus"]},{"id":"view_compiled_css","type":"view_compiled","name":"View Compiled CSS","disabled_processors":["none"]},{"id":"analyze_css","type":"analyze","name":"Analyze CSS"},{"id":"maximize_css_editor","type":"maximize","name":"Maximize CSS Editor"},{"id":"minimize_css_editor","type":"minimize","name":"Minimize CSS Editor"},{"id":"fold_all_css","type":"fold_all","name":"Fold All","disabled_processors":["sass"]},{"id":"unfold_all_css","type":"unfold_all","name":"Unfold All","disabled_processors":["sass"]}],"processors":[{"id":"none","name":"None"},{"id":"less","name":"Less"},{"id":"scss","name":"SCSS"},{"id":"sass","name":"Sass"},{"id":"stylus","name":"Stylus"},{"id":"postcss","name":"PostCSS"}],"parSuffixes":["less","scss","sass","styl"]},{"id":"js","type":"js","name":"JS","actions":[{"id":"tidy_js","type":"tidy_code","name":"Format JavaScript","disabled_processors":["coffeescript, livescript"]},{"id":"view_compiled_js","type":"view_compiled","name":"View Compiled JavaScript","disabled_processors":["none"]},{"id":"analyze_js","type":"analyze","name":"Analyze JavaScript"},{"id":"maximize_js_editor","type":"maximize","name":"Maximize JavaScript Editor"},{"id":"minimize_js_editor","type":"minimize","name":"Minimize JavaScript Editor"},{"id":"fold_all_js","type":"fold_all","name":"Fold All"},{"id":"unfold_all_js","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"babel","name":"Babel"},{"id":"typescript","name":"TypeScript"},{"id":"coffeescript","name":"CoffeeScript"},{"id":"livescript","name":"LiveScript"}]}],"formatters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/format"}],"linters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/lint"}],"preview":{"intervalMaxWaitMS":3500,"intervalMS":1200},"settings":[{"id":"details","name":"Pen Details","type":"setting"},{"id":"privacy","name":"Privacy","pro":true,"type":"setting"},{"id":"behavior","name":"Behavior","type":"setting"},{"id":"editor","name":"Editor","type":"setting"},{"id":"template","name":"Template","type":"setting"},{"id":"screenshot","name":"Screenshot","pro":true,"type":"setting"}]}
+    __processedPen = {"html":"&lt;ul class=&quot;snip1175&quot;&gt;\n  &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;#&quot; data-hover=&quot;Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;\n  &lt;li&gt;&lt;a href=&quot;#&quot; data-hover=&quot;About Us&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;\n  &lt;li&gt;&lt;a href=&quot;#&quot; data-hover=&quot;Blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;\n  &lt;li&gt;&lt;a href=&quot;#&quot; data-hover=&quot;Services&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;\n  &lt;li&gt;&lt;a href=&quot;#&quot; data-hover=&quot;Products&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;\n  &lt;li&gt;&lt;a href=&quot;#&quot; data-hover=&quot;Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;","css":"@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);\n.snip1175 {\n  font-family: &#39;Raleway&#39;, Arial, sans-serif;\n  text-align: center;\n  text-transform: uppercase;\n  font-weight: 500;\n}\n.snip1175 * {\n  box-sizing: border-box;\n  -webkit-transition: all 0.35s ease;\n  transition: all 0.35s ease;\n}\n.snip1175 li {\n  display: inline-block;\n  list-style: outside none none;\n  margin: 0 1.2em;\n  overflow: hidden;\n}\n.snip1175 a {\n  padding: 0 0.5em 0 0.2em;\n  color: rgba(255, 255, 255, 0.5);\n  position: relative;\n  display: inline-block;\n  letter-spacing: 1px;\n  margin: 0;\n  text-decoration: none;\n}\n.snip1175 a:before,\n.snip1175 a:after {\n  position: absolute;\n  -webkit-transition: all 0.35s ease;\n  transition: all 0.35s ease;\n}\n.snip1175 a:before {\n  right: 100%;\n  display: block;\n  width: 3px;\n  height: 100%;\n  content: &quot;&quot;;\n  background-color: #f39c12;\n}\n.snip1175 a:after {\n  padding: 0 0.5em 0 0.2em;\n  position: absolute;\n  right: 100%;\n  top: 0;\n  content: attr(data-hover);\n  color: white;\n  white-space: nowrap;\n}\n.snip1175 li:hover a,\n.snip1175 .current a {\n  transform: translateX(100%);\n}","js":""};
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __pageType = "embed";
+    __editable = false;
+    __embed_prefill = false;
+    __env = "production";
+  </script>
+<script src="OyxyRG_data/embed-cec5e48ccb37fecc5fc41dcb2f1fbd7d2443341801322a8e6299055.js"></script>
+<script defer="defer" src="QjORxB_data/beacon.js" data-cf-beacon="{&quot;rayId&quot;:&quot;55a34de3ba5ccc7b&quot;,&quot;version&quot;:&quot;2019.10.2&quot;,&quot;startTime&quot;:1579882507695}"></script>
+
+
+</body></html>

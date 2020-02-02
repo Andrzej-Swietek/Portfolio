@@ -1,0 +1,21 @@
+<h2 class="circle-scroll-title">Scroll to see magic ... </h2>
+<section class="circle-scroll-img-section"></section>
+<div class="circle-scroll-container">
+    <h2>Andrzej Świętek - The best choice for your app</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi, beatae, corporis deleniti dignissimos
+        dolorem dolorum error esse ex fugit inventore magnam maxime minima neque, tempore temporibus ullam velit veritatis
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam obcaecati reprehenderit rerum suscipit
+        Accusantium alias, architecto blanditiis, enim est fuga ipsum neque nihil numquam officia praesentium quas,
+        repellat saepe voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci culpa, dignissimos,
+        dolorem doloremque fugiat harum labore laboriosam molestias nam natus nostrum porro
+        provident quaerat quas ratione repellat sed.
+    </p>
+</div>
+<script type="text/javascript">
+    var section = document.querySelector('section');
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
+        section.style.clipPath = "circle(" + value + "px at center)";
+    })
+</script>
