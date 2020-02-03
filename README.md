@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ git clone https://github.com/deepakgd/PWA-Demo.git
+$ git clone https://github.com/AndrzejSwietek2001/Portfolio.git
 $ yarn
 $ cp .env.example .env
 $ npm start
