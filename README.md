@@ -1,5 +1,7 @@
 # My Personal Portfolio and A.T.H.E.N.A Project Documentation
 ![Image](https://github.com/AndrzejSwietek2001/Portfolio/blob/master/public/images/portfolio-www.png)
+
+![Image](https://github.com/AndrzejSwietek2001/Portfolio/blob/master/public/images/tree.png)
 ## Install
 
 ```sh
